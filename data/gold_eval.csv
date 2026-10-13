@@ -1,0 +1,25 @@
+text,sentiment,category
+The Federal Reserve raised interest rates by a quarter point and warned that more hikes may follow.,Negative,Banking & Central Banks
+Regional lender reports record quarterly profit as loan demand strengthens.,Positive,Banking & Central Banks
+European Central Bank holds rates steady and says inflation is cooling.,Positive,Banking & Central Banks
+Bank shares slump after regulators propose tougher capital rules.,Negative,Banking & Central Banks
+"Chipmaker unveils faster processor, sending technology shares to a record high.",Positive,Tech Stocks & Software
+Cloud software company cuts its annual forecast after customers delay purchases.,Negative,Tech Stocks & Software
+Startup behind a popular payments app files for an IPO after rapid user growth.,Positive,Tech Stocks & Software
+"Hackers breached a major social network, exposing millions of user records.",Negative,Tech Stocks & Software
+Home sales fall for the third straight month as mortgage rates stay high.,Negative,Real Estate
+Builders report stronger demand for new homes as lending costs ease.,Positive,Real Estate
+Commercial property values stabilise after a two-year decline.,Neutral,Real Estate
+Crude oil jumps after producers agree to deeper output cuts.,Neutral,Energy & Commodities
+Gold slips as the dollar strengthens and investors favour stocks.,Negative,Energy & Commodities
+Natural gas prices tumble on mild weather and record storage.,Negative,Energy & Commodities
+Solar and wind developers see orders surge under new government incentives.,Positive,Energy & Commodities
+Global trade volumes rebound as tariffs on key goods are lifted.,Positive,Trade & Macro Economy
+Unemployment ticks up and economists warn of a looming recession.,Negative,Trade & Macro Economy
+"Manufacturing output was flat last month, in line with forecasts.",Neutral,Trade & Macro Economy
+Government unveils tax cuts and a spending package to support growth.,Positive,Trade & Macro Economy
+Airline stocks rally as fuel costs fall and summer bookings rise.,Positive,General Markets
+"Drugmaker's trial misses its main goal, sending shares sharply lower.",Negative,General Markets
+Retailer's quarterly earnings match analyst estimates.,Neutral,General Markets
+Shares were little changed in quiet trading ahead of the holiday.,Neutral,General Markets
+Automaker recalls thousands of vehicles over a braking defect.,Negative,General Markets

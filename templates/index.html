@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finance News Desk</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="masthead">
+    <h1>Finance News Desk</h1>
+    <p>Paste an article or pick a sample. Get sentiment and topic first, then a summary, answers, or key takeaways.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-labelledby="article-heading">
+      <h2 id="article-heading">Article</h2>
+
+      <label for="sample">Sample articles</label>
+      <select id="sample">
+        <option value="">Choose a sample...</option>
+        {% for item in curated %}
+        <option value="{{ loop.index0 }}">{{ item.title }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="article">Article text</label>
+      <textarea id="article" rows="10" placeholder="Paste a finance article or headline here"></textarea>
+
+      <label for="file">Or upload a .txt file</label>
+      <input type="file" id="file" accept=".txt,text/plain">
+
+      <div class="actions">
+        <button type="button" id="btn-analyze" class="primary">Analyze</button>
+        <button type="button" id="btn-summarize">Summarize</button>
+        <button type="button" id="btn-insights">Key takeaways</button>
+      </div>
+
+      <label for="question">Ask about the article</label>
+      <div class="ask-row">
+        <input type="text" id="question" placeholder="What is the overall outlook?">
+        <button type="button" id="btn-ask">Ask</button>
+      </div>
+      <p class="hint">With no article text, questions and takeaways draw on the dataset's headlines.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="readout-heading" aria-live="polite">
+      <h2 id="readout-heading">Readout</h2>
+
+      <div id="empty" class="empty">Analyze an article to see its sentiment, topic and the companies or indices it mentions.</div>
+
+      <div id="readout" hidden>
+        <div class="gauge" role="img" aria-label="Sentiment score">
+          <div class="gauge-track"><span id="marker" class="marker"></span></div>
+          <div class="gauge-scale"><span>Negative</span><span>Neutral</span><span>Positive</span></div>
+        </div>
+        <p class="verdict"><strong id="sentiment-label"></strong> <span id="sentiment-score"></span></p>
+        <dl class="facts">
+          <dt>Topic</dt><dd id="category"></dd>
+          <dt>Mentions</dt><dd id="entities"></dd>
+        </dl>
+      </div>
+
+      <div id="llm-block" hidden>
+        <h3 id="llm-title"></h3>
+        <div id="llm-output" class="llm-output"></div>
+      </div>
+
+      <p id="status" class="status" role="status"></p>
+      <p class="disclaimer">{{ disclaimer }}</p>
+    </section>
+  </main>
+
+  <script>window.CURATED = {{ curated | tojson }};</script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
